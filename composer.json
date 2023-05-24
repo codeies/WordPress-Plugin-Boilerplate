@@ -1,0 +1,20 @@
+{
+    "name": "liilab/quizbit",
+    "description": "A quiz making plugin.",
+    "type": "wordpress-plugin",
+    "license": "GPLv2",
+    "authors": [
+        {
+            "name": "Sabbir Ahmed Talukdar",
+            "email": "satsabbir11@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "QuizBit\\": "includes/"
+        },
+        "files": []
+    }
+}
