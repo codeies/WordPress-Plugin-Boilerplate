@@ -1,6 +1,6 @@
 {
-    "name": "liilab/quizbit",
-    "description": "A quiz making plugin.",
+    "name": "liilab/eventmaster",
+    "description": "A event making plugin.",
     "type": "wordpress-plugin",
     "license": "GPLv2",
     "authors": [
@@ -13,7 +13,7 @@
     "require": {},
     "autoload": {
         "psr-4": {
-            "QuizBit\\": "includes/"
+            "EventMaster\\": "includes/"
         },
         "files": []
     }

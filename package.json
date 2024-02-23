@@ -1,7 +1,7 @@
 {
-  "name": "quizbit",
+  "name": "eventmaster",
   "version": "1.0.0",
-  "description": "A quiz making plugin for wordpress.",
+  "description": "A event making plugin for wordpress.",
   "main": "index.tsx",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

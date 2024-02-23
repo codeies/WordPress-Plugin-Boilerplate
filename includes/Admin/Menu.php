@@ -1,6 +1,6 @@
 <?php
 
-namespace QuizBit\Admin;
+namespace EventMaster\Admin;
 
 /**
  * The Menu handler class
@@ -24,8 +24,8 @@ class Menu
      */
     public function admin_enqueue_scripts()
     {
-        wp_enqueue_style('quizbit-style',  QUIZBIT_URL . '/build/index.css');
-        wp_enqueue_script('quizbit-script', QUIZBIT_URL . '/build/index.js', array('wp-element'), '1.0.0', true);
+        wp_enqueue_style('eventmaster-style',  QUIZBIT_URL . '/build/index.css');
+        wp_enqueue_script('eventmaster-script', QUIZBIT_URL . '/build/index.js', array('wp-element'), '1.0.0', true);
     }
 
     /**
@@ -35,7 +35,7 @@ class Menu
      */
     public function admin_menu()
     {
-        add_menu_page(__('Quiz Bit', 'quizbit'), __('Quiz Bit', 'quizbit'), 'manage_options', 'quizbit', [$this, 'admin_page'], 'dashicons-admin-post', '2.1');
+        add_menu_page(__('Quiz Bit', 'eventmaster'), __('Quiz Bit', 'eventmaster'), 'manage_options', 'eventmaster', [$this, 'admin_page'], 'dashicons-admin-post', '2.1');
     }
 
     /**

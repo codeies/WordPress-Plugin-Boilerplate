@@ -1,15 +1,15 @@
 <?php
 
 /**
- * Plugin Name:       QuizBit
- * Description:       A quiz making plugin for WordPress
+ * Plugin Name:       EventMaster X
+ * Description:       A event making plugin for WordPress
  * Requires at least: 6.2
  * Requires PHP:      7.0
  * Version:           1.0
- * Author:            LII Lab
+ * Author:            Codeies Pvt Ltd
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain:       quizbit
+ * Text Domain:       eventmaster-x
  */
 
 
@@ -22,7 +22,7 @@ require_once __DIR__ . '/vendor/autoload.php';
 /**
  * The main plugin class
  */
-final class Quizbit
+final class Eventmaster
 {
 
     /**
@@ -48,7 +48,7 @@ final class Quizbit
     /**
      * Initializes a singleton instance
      *
-     * @return \Quizbit
+     * @return \Eventmaster
      */
     public static function init()
     {
@@ -83,9 +83,9 @@ final class Quizbit
     public function init_plugin()
     {
 
-        if (is_admin()) {
-            new QuizBit\Admin();
-        }
+        //if (is_admin()) {
+        new EventMaster\Loader();
+        //    }
     }
 
     /**
@@ -95,25 +95,25 @@ final class Quizbit
      */
     public function activate()
     {
-        $installed = get_option('quizbit_installed');
+        $installed = get_option('eventmaster_installed');
 
         if (!$installed) {
-            update_option('quizbit_installed', time());
+            update_option('eventmaster_installed', time());
         }
 
-        update_option('quizbit_version', QUIZBIT_VERSION);
+        update_option('eventmaster_version', QUIZBIT_VERSION);
     }
 }
 
 /**
  * Initializes the main plugin
  *
- * @return \Quizbit
+ * @return \Eventmaster
  */
-function quizbit()
+function eventmaster()
 {
-    return Quizbit::init();
+    return Eventmaster::init();
 }
 
 // kick-off the plugin
-quizbit();
+eventmaster();

@@ -1,16 +1,19 @@
 <?php
 
-namespace QuizBit;
+namespace EventMaster;
 
 /**
  * The admin class
  */
-class Admin {
+class Loader
+{
 
     /**
      * Initialize the class
      */
-    function __construct() {
+    function __construct()
+    {
         new Admin\Menu();
+        new Shortcodes\Shortcodes();
     }
 }
